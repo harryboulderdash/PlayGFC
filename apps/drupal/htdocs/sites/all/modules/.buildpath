@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="admin_menu"/>
+	<buildpathentry kind="src" path="apachesolr"/>
+	<buildpathentry kind="src" path="ctools"/>
+	<buildpathentry kind="src" path="google_analytics"/>
+	<buildpathentry kind="src" path="imageapi"/>
+	<buildpathentry kind="src" path="pathauto"/>
+	<buildpathentry kind="src" path="smtp"/>
+	<buildpathentry kind="src" path="token"/>
+	<buildpathentry kind="src" path="views"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>

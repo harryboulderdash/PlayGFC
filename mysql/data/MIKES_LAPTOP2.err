@@ -1,0 +1,868 @@
+150320 12:57:45 [Note] Plugin 'FEDERATED' is disabled.
+150320 12:57:48 InnoDB: The InnoDB memory heap is disabled
+150320 12:57:48 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150320 12:57:48 InnoDB: Compressed tables use zlib 1.2.3
+150320 12:57:48 InnoDB: Initializing buffer pool, size = 128.0M
+150320 12:57:48 InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file .\ibdata1 did not exist:
+InnoDB: a new database to be created!
+150320 12:57:48  InnoDB: Setting file .\ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+150320 12:57:53  InnoDB: Log file .\ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile0 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+150320 12:57:56  InnoDB: Log file .\ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile1 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: 127 rollback segment(s) active.
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+150320 12:58:06  InnoDB: Waiting for the background threads to start
+150320 12:58:07 InnoDB: 5.5.40 started; log sequence number 0
+150320 12:58:07 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150320 12:58:07 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150320 12:58:07 [Note] Server socket created on IP: '127.0.0.1'.
+150320 12:58:19 [Note] Event Scheduler: Loaded 0 events
+150320 12:58:19 [Note] C:\Bitnami\DRUPAL~1.34-\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150320 12:58:55 [Note] C:\Bitnami\DRUPAL~1.34-\mysql\bin\mysqld.exe: Normal shutdown
+
+150320 12:58:55 [Note] Event Scheduler: Purging the queue. 0 events
+150320 12:58:55  InnoDB: Starting shutdown...
+150320 12:58:55  InnoDB: Shutdown completed; log sequence number 1595675
+150320 12:58:56 [Note] C:\Bitnami\DRUPAL~1.34-\mysql\bin\mysqld.exe: Shutdown complete
+
+150320 12:59:31 [Note] Plugin 'FEDERATED' is disabled.
+150320 12:59:32 InnoDB: The InnoDB memory heap is disabled
+150320 12:59:32 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150320 12:59:32 InnoDB: Compressed tables use zlib 1.2.3
+150320 12:59:32 InnoDB: Initializing buffer pool, size = 128.0M
+150320 12:59:32 InnoDB: Completed initialization of buffer pool
+150320 12:59:32 InnoDB: highest supported file format is Barracuda.
+150320 12:59:33  InnoDB: Waiting for the background threads to start
+150320 12:59:34 InnoDB: 5.5.40 started; log sequence number 1595675
+150320 12:59:34 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150320 12:59:34 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150320 12:59:34 [Note] Server socket created on IP: '127.0.0.1'.
+150320 12:59:34 [Note] Event Scheduler: Loaded 0 events
+150320 12:59:34 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150320 13:35:35 [Note] Plugin 'FEDERATED' is disabled.
+150320 13:35:35 InnoDB: The InnoDB memory heap is disabled
+150320 13:35:35 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150320 13:35:35 InnoDB: Compressed tables use zlib 1.2.3
+150320 13:35:35 InnoDB: Initializing buffer pool, size = 128.0M
+150320 13:35:35 InnoDB: Completed initialization of buffer pool
+150320 13:35:35  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+150320 13:35:45  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+150320 14:39:56 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150320 14:39:56 [Note] Event Scheduler: Purging the queue. 0 events
+150320 14:39:56  InnoDB: Starting shutdown...
+150320 14:39:56  InnoDB: Shutdown completed; log sequence number 7188571
+150320 14:39:56 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150320 14:39:56 [Note] Plugin 'FEDERATED' is disabled.
+150320 14:39:56 InnoDB: The InnoDB memory heap is disabled
+150320 14:39:56 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150320 14:39:56 InnoDB: Compressed tables use zlib 1.2.3
+150320 14:39:56 InnoDB: Initializing buffer pool, size = 128.0M
+150320 14:39:56 InnoDB: Completed initialization of buffer pool
+150320 14:39:56 InnoDB: highest supported file format is Barracuda.
+150320 14:39:58  InnoDB: Waiting for the background threads to start
+150320 14:39:59 InnoDB: 5.5.40 started; log sequence number 7188571
+150320 14:39:59 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150320 14:39:59 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150320 14:39:59 [Note] Server socket created on IP: '127.0.0.1'.
+150320 14:39:59 [Note] Event Scheduler: Loaded 0 events
+150320 14:39:59 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150329  7:51:28 [Note] Plugin 'FEDERATED' is disabled.
+150329  7:51:28 InnoDB: The InnoDB memory heap is disabled
+150329  7:51:28 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150329  7:51:28 InnoDB: Compressed tables use zlib 1.2.3
+150329  7:51:28 InnoDB: Initializing buffer pool, size = 128.0M
+150329  7:51:28 InnoDB: Completed initialization of buffer pool
+150329  7:51:29 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+150329  7:51:29  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+150329  7:51:53  InnoDB: Waiting for the background threads to start
+150329  7:51:54 InnoDB: 5.5.40 started; log sequence number 130489653
+150329  7:51:54 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150329  7:51:54 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150329  7:51:54 [Note] Server socket created on IP: '127.0.0.1'.
+150329  7:52:01 [Note] Event Scheduler: Loaded 0 events
+150329  7:52:01 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150329 17:42:46 [Note] Plugin 'FEDERATED' is disabled.
+150329 17:42:46 InnoDB: The InnoDB memory heap is disabled
+150329 17:42:46 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150329 17:42:46 InnoDB: Compressed tables use zlib 1.2.3
+150329 17:42:46 InnoDB: Initializing buffer pool, size = 128.0M
+150329 17:42:46 InnoDB: Completed initialization of buffer pool
+150329 17:42:47 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+150329 17:42:47  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+150329 17:42:50  InnoDB: Waiting for the background threads to start
+150329 17:42:51 InnoDB: 5.5.40 started; log sequence number 131818814
+150329 17:42:51 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150329 17:42:51 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150329 17:42:51 [Note] Server socket created on IP: '127.0.0.1'.
+150329 17:42:52 [Note] Event Scheduler: Loaded 0 events
+150329 17:42:52 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150330  1:59:35 [Note] Plugin 'FEDERATED' is disabled.
+150330  1:59:36 InnoDB: The InnoDB memory heap is disabled
+150330  1:59:36 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150330  1:59:36 InnoDB: Compressed tables use zlib 1.2.3
+150330  1:59:36 InnoDB: Initializing buffer pool, size = 128.0M
+150330  1:59:36 InnoDB: Completed initialization of buffer pool
+150330  1:59:37 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+150330  1:59:38  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+150330  2:00:00  InnoDB: Waiting for the background threads to start
+150330  2:00:01 InnoDB: 5.5.40 started; log sequence number 131818814
+150330  2:00:01 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150330  2:00:01 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150330  2:00:01 [Note] Server socket created on IP: '127.0.0.1'.
+150330  2:00:09 [Note] Event Scheduler: Loaded 0 events
+150330  2:00:09 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150404  8:07:50 [Note] Plugin 'FEDERATED' is disabled.
+150404  8:07:50 InnoDB: The InnoDB memory heap is disabled
+150404  8:07:50 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150404  8:07:50 InnoDB: Compressed tables use zlib 1.2.3
+150404  8:07:50 InnoDB: Initializing buffer pool, size = 128.0M
+150404  8:07:50 InnoDB: Completed initialization of buffer pool
+150404  8:07:50 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+150404  8:07:50  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+150404  8:07:55  InnoDB: Waiting for the background threads to start
+150404  8:07:56 InnoDB: 5.5.40 started; log sequence number 199934228
+150404  8:07:56 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150404  8:07:56 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150404  8:07:56 [Note] Server socket created on IP: '127.0.0.1'.
+150404  8:07:56 [Note] Event Scheduler: Loaded 0 events
+150404  8:07:56 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150420 18:21:47 [Note] Plugin 'FEDERATED' is disabled.
+150420 18:21:47 InnoDB: The InnoDB memory heap is disabled
+150420 18:21:47 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150420 18:21:47 InnoDB: Compressed tables use zlib 1.2.3
+150420 18:21:47 InnoDB: Initializing buffer pool, size = 128.0M
+150420 18:21:47 InnoDB: Completed initialization of buffer pool
+150420 18:21:47 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+150420 18:21:47  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+150420 18:21:55  InnoDB: Waiting for the background threads to start
+150420 18:21:56 InnoDB: 5.5.40 started; log sequence number 199934228
+150420 18:21:56 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150420 18:21:56 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150420 18:21:56 [Note] Server socket created on IP: '127.0.0.1'.
+150420 18:21:56 [Note] Event Scheduler: Loaded 0 events
+150420 18:21:56 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150427  0:51:59 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150427  0:52:01 [Note] Event Scheduler: Purging the queue. 0 events
+150427  0:52:07  InnoDB: Starting shutdown...
+150427  0:52:21  InnoDB: Shutdown completed; log sequence number 199934228
+150427  0:52:25 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150427  0:53:40 [Note] Plugin 'FEDERATED' is disabled.
+150427  0:53:40 InnoDB: The InnoDB memory heap is disabled
+150427  0:53:40 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150427  0:53:40 InnoDB: Compressed tables use zlib 1.2.3
+150427  0:53:40 InnoDB: Initializing buffer pool, size = 128.0M
+150427  0:53:40 InnoDB: Completed initialization of buffer pool
+150427  0:53:41 InnoDB: highest supported file format is Barracuda.
+150427  0:53:46  InnoDB: Waiting for the background threads to start
+150427  0:53:48 InnoDB: 5.5.40 started; log sequence number 199934228
+150427  0:53:48 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150427  0:53:48 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150427  0:53:48 [Note] Server socket created on IP: '127.0.0.1'.
+150427  0:53:48 [Note] Event Scheduler: Loaded 0 events
+150427  0:53:48 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150502 18:35:09 [Note] Plugin 'FEDERATED' is disabled.
+150502 18:35:10 InnoDB: The InnoDB memory heap is disabled
+150502 18:35:10 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150502 18:35:10 InnoDB: Compressed tables use zlib 1.2.3
+150502 18:35:10 InnoDB: Initializing buffer pool, size = 128.0M
+150502 18:35:10 InnoDB: Completed initialization of buffer pool
+150502 18:35:11 InnoDB: highest supported file format is Barracuda.
+150502 18:35:39  InnoDB: Waiting for the background threads to start
+150502 18:35:40 InnoDB: 5.5.40 started; log sequence number 199934228
+150502 18:35:40 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150502 18:35:40 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150502 18:35:40 [Note] Server socket created on IP: '127.0.0.1'.
+150502 18:35:45 [Note] Event Scheduler: Loaded 0 events
+150502 18:35:45 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150503  4:16:46 [Note] Plugin 'FEDERATED' is disabled.
+150503  4:16:47 InnoDB: The InnoDB memory heap is disabled
+150503  4:16:47 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150503  4:16:47 InnoDB: Compressed tables use zlib 1.2.3
+150503  4:16:47 InnoDB: Initializing buffer pool, size = 128.0M
+150503  4:16:47 InnoDB: Completed initialization of buffer pool
+150503  4:16:47 InnoDB: highest supported file format is Barracuda.
+150503  4:17:06  InnoDB: Waiting for the background threads to start
+150503  4:17:07 InnoDB: 5.5.40 started; log sequence number 199934228
+150503  4:17:07 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150503  4:17:07 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150503  4:17:07 [Note] Server socket created on IP: '127.0.0.1'.
+150503  4:17:09 [Note] Event Scheduler: Loaded 0 events
+150503  4:17:09 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150511  0:17:17 [Note] Plugin 'FEDERATED' is disabled.
+150511  0:17:17 InnoDB: The InnoDB memory heap is disabled
+150511  0:17:17 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150511  0:17:17 InnoDB: Compressed tables use zlib 1.2.3
+150511  0:17:17 InnoDB: Initializing buffer pool, size = 128.0M
+150511  0:17:17 InnoDB: Completed initialization of buffer pool
+150511  0:17:17 InnoDB: highest supported file format is Barracuda.
+150511  0:17:22  InnoDB: Waiting for the background threads to start
+150511  0:17:23 InnoDB: 5.5.40 started; log sequence number 199934228
+150511  0:17:23 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150511  0:17:23 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150511  0:17:23 [Note] Server socket created on IP: '127.0.0.1'.
+150511  0:17:23 [Note] Event Scheduler: Loaded 0 events
+150511  0:17:23 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150511 23:31:50 [Note] Plugin 'FEDERATED' is disabled.
+150511 23:31:50 InnoDB: The InnoDB memory heap is disabled
+150511 23:31:50 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150511 23:31:50 InnoDB: Compressed tables use zlib 1.2.3
+150511 23:31:50 InnoDB: Initializing buffer pool, size = 128.0M
+150511 23:31:50 InnoDB: Completed initialization of buffer pool
+150511 23:31:50 InnoDB: highest supported file format is Barracuda.
+150511 23:31:56  InnoDB: Waiting for the background threads to start
+150511 23:31:57 InnoDB: 5.5.40 started; log sequence number 199934228
+150511 23:31:57 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150511 23:31:57 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150511 23:31:57 [Note] Server socket created on IP: '127.0.0.1'.
+150511 23:31:58 [Note] Event Scheduler: Loaded 0 events
+150511 23:31:58 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150516 23:04:27 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150516 23:04:27 [Note] Event Scheduler: Purging the queue. 0 events
+150516 23:04:28  InnoDB: Starting shutdown...
+150516 23:04:39  InnoDB: Shutdown completed; log sequence number 199934228
+150516 23:04:39 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150516 23:07:45 [Note] Plugin 'FEDERATED' is disabled.
+150516 23:07:46 InnoDB: The InnoDB memory heap is disabled
+150516 23:07:46 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150516 23:07:46 InnoDB: Compressed tables use zlib 1.2.3
+150516 23:07:46 InnoDB: Initializing buffer pool, size = 128.0M
+150516 23:07:46 InnoDB: Completed initialization of buffer pool
+150516 23:07:46 InnoDB: highest supported file format is Barracuda.
+150516 23:07:52  InnoDB: Waiting for the background threads to start
+150516 23:07:53 InnoDB: 5.5.40 started; log sequence number 199934228
+150516 23:07:53 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150516 23:07:53 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150516 23:07:53 [Note] Server socket created on IP: '127.0.0.1'.
+150516 23:07:54 [Note] Event Scheduler: Loaded 0 events
+150516 23:07:54 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150613 22:01:29 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150613 22:01:36 [Note] Event Scheduler: Purging the queue. 0 events
+150613 22:02:10  InnoDB: Starting shutdown...
+150613 22:03:47  InnoDB: Shutdown completed; log sequence number 199934228
+150613 22:03:48 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150613 22:08:12 [Note] Plugin 'FEDERATED' is disabled.
+150613 22:08:12 InnoDB: The InnoDB memory heap is disabled
+150613 22:08:12 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150613 22:08:12 InnoDB: Compressed tables use zlib 1.2.3
+150613 22:08:12 InnoDB: Initializing buffer pool, size = 128.0M
+150613 22:08:12 InnoDB: Completed initialization of buffer pool
+150613 22:08:13 InnoDB: highest supported file format is Barracuda.
+150613 22:08:14  InnoDB: Waiting for the background threads to start
+150613 22:08:15 InnoDB: 5.5.40 started; log sequence number 199934228
+150613 22:08:15 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150613 22:08:15 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150613 22:08:15 [Note] Server socket created on IP: '127.0.0.1'.
+150613 22:08:16 [Note] Event Scheduler: Loaded 0 events
+150613 22:08:16 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150711 22:30:35 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150711 22:30:49 [Note] Event Scheduler: Purging the queue. 0 events
+150711 22:30:59  InnoDB: Starting shutdown...
+150711 22:31:42  InnoDB: Shutdown completed; log sequence number 199934228
+150711 22:31:43 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150711 22:33:05 [Note] Plugin 'FEDERATED' is disabled.
+150711 22:33:05 InnoDB: The InnoDB memory heap is disabled
+150711 22:33:05 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150711 22:33:05 InnoDB: Compressed tables use zlib 1.2.3
+150711 22:33:05 InnoDB: Initializing buffer pool, size = 128.0M
+150711 22:33:05 InnoDB: Completed initialization of buffer pool
+150711 22:33:05 InnoDB: highest supported file format is Barracuda.
+150711 22:33:11  InnoDB: Waiting for the background threads to start
+150711 22:33:12 InnoDB: 5.5.40 started; log sequence number 199934228
+150711 22:33:12 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150711 22:33:12 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150711 22:33:12 [Note] Server socket created on IP: '127.0.0.1'.
+150711 22:33:13 [Note] Event Scheduler: Loaded 0 events
+150711 22:33:13 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150711 22:42:19 [Note] Plugin 'FEDERATED' is disabled.
+150711 22:42:19 InnoDB: The InnoDB memory heap is disabled
+150711 22:42:19 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150711 22:42:19 InnoDB: Compressed tables use zlib 1.2.3
+150711 22:42:19 InnoDB: Initializing buffer pool, size = 128.0M
+150711 22:42:19 InnoDB: Completed initialization of buffer pool
+150711 22:42:19 InnoDB: highest supported file format is Barracuda.
+150711 22:42:25  InnoDB: Waiting for the background threads to start
+150711 22:42:26 InnoDB: 5.5.40 started; log sequence number 199934228
+150711 22:42:26 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150711 22:42:26 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150711 22:42:26 [Note] Server socket created on IP: '127.0.0.1'.
+150711 22:42:27 [Note] Event Scheduler: Loaded 0 events
+150711 22:42:27 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150718 14:06:27 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150718 14:06:32 [Note] Event Scheduler: Purging the queue. 0 events
+150718 14:06:45  InnoDB: Starting shutdown...
+150718 14:07:03  InnoDB: Shutdown completed; log sequence number 199934228
+150718 14:07:05 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150718 14:10:40 [Note] Plugin 'FEDERATED' is disabled.
+150718 14:10:40 InnoDB: The InnoDB memory heap is disabled
+150718 14:10:40 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150718 14:10:40 InnoDB: Compressed tables use zlib 1.2.3
+150718 14:10:40 InnoDB: Initializing buffer pool, size = 128.0M
+150718 14:10:40 InnoDB: Completed initialization of buffer pool
+150718 14:10:41 InnoDB: highest supported file format is Barracuda.
+150718 14:10:48  InnoDB: Waiting for the background threads to start
+150718 14:10:49 InnoDB: 5.5.40 started; log sequence number 199934228
+150718 14:10:49 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150718 14:10:49 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150718 14:10:49 [Note] Server socket created on IP: '127.0.0.1'.
+150718 14:10:50 [Note] Event Scheduler: Loaded 0 events
+150718 14:10:50 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150724  8:26:12 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150724  8:26:18 [Note] Event Scheduler: Purging the queue. 0 events
+150724  8:26:28  InnoDB: Starting shutdown...
+150724  8:26:42  InnoDB: Shutdown completed; log sequence number 199934228
+150724  8:26:46 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150724  8:28:17 [Note] Plugin 'FEDERATED' is disabled.
+150724  8:28:17 InnoDB: The InnoDB memory heap is disabled
+150724  8:28:17 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150724  8:28:17 InnoDB: Compressed tables use zlib 1.2.3
+150724  8:28:17 InnoDB: Initializing buffer pool, size = 128.0M
+150724  8:28:17 InnoDB: Completed initialization of buffer pool
+150724  8:28:17 InnoDB: highest supported file format is Barracuda.
+150724  8:28:22  InnoDB: Waiting for the background threads to start
+150724  8:28:23 InnoDB: 5.5.40 started; log sequence number 199934228
+150724  8:28:23 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150724  8:28:23 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150724  8:28:23 [Note] Server socket created on IP: '127.0.0.1'.
+150724  8:28:25 [Note] Event Scheduler: Loaded 0 events
+150724  8:28:25 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150810  6:04:22 [Note] Plugin 'FEDERATED' is disabled.
+150810  6:04:22 InnoDB: The InnoDB memory heap is disabled
+150810  6:04:22 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150810  6:04:22 InnoDB: Compressed tables use zlib 1.2.3
+150810  6:04:23 InnoDB: Initializing buffer pool, size = 128.0M
+150810  6:04:23 InnoDB: Completed initialization of buffer pool
+150810  6:04:23 InnoDB: highest supported file format is Barracuda.
+150810  6:04:32  InnoDB: Waiting for the background threads to start
+150810  6:04:33 InnoDB: 5.5.40 started; log sequence number 199934228
+150810  6:04:33 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150810  6:04:33 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150810  6:04:33 [Note] Server socket created on IP: '127.0.0.1'.
+150810  6:04:35 [Note] Event Scheduler: Loaded 0 events
+150810  6:04:35 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150810 22:19:24 [Note] Plugin 'FEDERATED' is disabled.
+150810 22:19:24 InnoDB: The InnoDB memory heap is disabled
+150810 22:19:24 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150810 22:19:24 InnoDB: Compressed tables use zlib 1.2.3
+150810 22:19:24 InnoDB: Initializing buffer pool, size = 128.0M
+150810 22:19:24 InnoDB: Completed initialization of buffer pool
+150810 22:19:25 InnoDB: highest supported file format is Barracuda.
+150810 22:19:28  InnoDB: Waiting for the background threads to start
+150810 22:19:29 InnoDB: 5.5.40 started; log sequence number 199934228
+150810 22:19:29 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150810 22:19:29 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150810 22:19:29 [Note] Server socket created on IP: '127.0.0.1'.
+150810 22:19:30 [Note] Event Scheduler: Loaded 0 events
+150810 22:19:30 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150817  2:11:25 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150817  2:11:27 [Note] Event Scheduler: Purging the queue. 0 events
+150817  2:11:31  InnoDB: Starting shutdown...
+150817  2:12:21  InnoDB: Shutdown completed; log sequence number 199934228
+150817  2:12:22 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150817  2:15:50 [Note] Plugin 'FEDERATED' is disabled.
+150817  2:15:50 InnoDB: The InnoDB memory heap is disabled
+150817  2:15:50 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150817  2:15:50 InnoDB: Compressed tables use zlib 1.2.3
+150817  2:15:50 InnoDB: Initializing buffer pool, size = 128.0M
+150817  2:15:50 InnoDB: Completed initialization of buffer pool
+150817  2:15:50 InnoDB: highest supported file format is Barracuda.
+150817  2:15:51  InnoDB: Waiting for the background threads to start
+150817  2:15:52 InnoDB: 5.5.40 started; log sequence number 199934228
+150817  2:15:52 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150817  2:15:52 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150817  2:15:52 [Note] Server socket created on IP: '127.0.0.1'.
+150817  2:15:53 [Note] Event Scheduler: Loaded 0 events
+150817  2:15:53 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150822 19:21:09 [Note] Plugin 'FEDERATED' is disabled.
+150822 19:21:09 InnoDB: The InnoDB memory heap is disabled
+150822 19:21:09 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150822 19:21:09 InnoDB: Compressed tables use zlib 1.2.3
+150822 19:21:09 InnoDB: Initializing buffer pool, size = 128.0M
+150822 19:21:09 InnoDB: Completed initialization of buffer pool
+150822 19:21:09 InnoDB: highest supported file format is Barracuda.
+150822 19:21:14  InnoDB: Waiting for the background threads to start
+150822 19:21:15 InnoDB: 5.5.40 started; log sequence number 199934228
+150822 19:21:15 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150822 19:21:15 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150822 19:21:15 [Note] Server socket created on IP: '127.0.0.1'.
+150822 19:21:18 [Note] Event Scheduler: Loaded 0 events
+150822 19:21:18 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150912  4:51:28 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150912  4:51:34 [Note] Event Scheduler: Purging the queue. 0 events
+150912  4:51:48  InnoDB: Starting shutdown...
+150912  4:52:31  InnoDB: Shutdown completed; log sequence number 199934228
+150912  4:52:32 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150912  4:56:15 [Note] Plugin 'FEDERATED' is disabled.
+150912  4:56:15 InnoDB: The InnoDB memory heap is disabled
+150912  4:56:15 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150912  4:56:15 InnoDB: Compressed tables use zlib 1.2.3
+150912  4:56:16 InnoDB: Initializing buffer pool, size = 128.0M
+150912  4:56:16 InnoDB: Completed initialization of buffer pool
+150912  4:56:16 InnoDB: highest supported file format is Barracuda.
+150912  4:56:23  InnoDB: Waiting for the background threads to start
+150912  4:56:24 InnoDB: 5.5.40 started; log sequence number 199934228
+150912  4:56:24 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150912  4:56:24 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150912  4:56:24 [Note] Server socket created on IP: '127.0.0.1'.
+150912  4:56:28 [Note] Event Scheduler: Loaded 0 events
+150912  4:56:28 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150925  2:31:39 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+150925  2:31:51 [Note] Event Scheduler: Purging the queue. 0 events
+150925  2:32:02  InnoDB: Starting shutdown...
+150925  2:32:37  InnoDB: Shutdown completed; log sequence number 199934228
+150925  2:32:37 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+150925  2:35:59 [Note] Plugin 'FEDERATED' is disabled.
+150925  2:35:59 InnoDB: The InnoDB memory heap is disabled
+150925  2:35:59 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+150925  2:35:59 InnoDB: Compressed tables use zlib 1.2.3
+150925  2:36:00 InnoDB: Initializing buffer pool, size = 128.0M
+150925  2:36:00 InnoDB: Completed initialization of buffer pool
+150925  2:36:00 InnoDB: highest supported file format is Barracuda.
+150925  2:36:05  InnoDB: Waiting for the background threads to start
+150925  2:36:06 InnoDB: 5.5.40 started; log sequence number 199934228
+150925  2:36:06 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+150925  2:36:06 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+150925  2:36:06 [Note] Server socket created on IP: '127.0.0.1'.
+150925  2:36:08 [Note] Event Scheduler: Loaded 0 events
+150925  2:36:08 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151014  0:22:00 [Note] Plugin 'FEDERATED' is disabled.
+151014  0:22:00 InnoDB: The InnoDB memory heap is disabled
+151014  0:22:00 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151014  0:22:00 InnoDB: Compressed tables use zlib 1.2.3
+151014  0:22:00 InnoDB: Initializing buffer pool, size = 128.0M
+151014  0:22:00 InnoDB: Completed initialization of buffer pool
+151014  0:22:00 InnoDB: highest supported file format is Barracuda.
+151014  0:22:03  InnoDB: Waiting for the background threads to start
+151014  0:22:04 InnoDB: 5.5.40 started; log sequence number 199934228
+151014  0:22:04 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151014  0:22:04 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151014  0:22:04 [Note] Server socket created on IP: '127.0.0.1'.
+151014  0:22:04 [Note] Event Scheduler: Loaded 0 events
+151014  0:22:04 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151017  2:57:56 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+151017  2:57:56 [Note] Event Scheduler: Purging the queue. 0 events
+151017  2:57:56  InnoDB: Starting shutdown...
+151017  2:58:01  InnoDB: Shutdown completed; log sequence number 199934228
+151017  2:58:01 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+151017  3:00:44 [Note] Plugin 'FEDERATED' is disabled.
+151017  3:00:44 InnoDB: The InnoDB memory heap is disabled
+151017  3:00:44 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151017  3:00:44 InnoDB: Compressed tables use zlib 1.2.3
+151017  3:00:44 InnoDB: Initializing buffer pool, size = 128.0M
+151017  3:00:44 InnoDB: Completed initialization of buffer pool
+151017  3:00:44 InnoDB: highest supported file format is Barracuda.
+151017  3:00:45  InnoDB: Waiting for the background threads to start
+151017  3:00:46 InnoDB: 5.5.40 started; log sequence number 199934228
+151017  3:00:46 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151017  3:00:46 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151017  3:00:46 [Note] Server socket created on IP: '127.0.0.1'.
+151017  3:00:46 [Note] Event Scheduler: Loaded 0 events
+151017  3:00:46 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151115 23:19:23 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+151115 23:19:40 [Note] Event Scheduler: Purging the queue. 0 events
+151115 23:19:54  InnoDB: Starting shutdown...
+151115 23:20:20  InnoDB: Shutdown completed; log sequence number 199934228
+151115 23:20:22 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+151115 23:23:09 [Note] Plugin 'FEDERATED' is disabled.
+151115 23:23:09 InnoDB: The InnoDB memory heap is disabled
+151115 23:23:09 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151115 23:23:09 InnoDB: Compressed tables use zlib 1.2.3
+151115 23:23:09 InnoDB: Initializing buffer pool, size = 128.0M
+151115 23:23:09 InnoDB: Completed initialization of buffer pool
+151115 23:23:09 InnoDB: highest supported file format is Barracuda.
+151115 23:23:10  InnoDB: Waiting for the background threads to start
+151115 23:23:11 InnoDB: 5.5.40 started; log sequence number 199934228
+151115 23:23:11 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151115 23:23:11 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151115 23:23:11 [Note] Server socket created on IP: '127.0.0.1'.
+151115 23:23:11 [Note] Event Scheduler: Loaded 0 events
+151115 23:23:11 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151214 23:56:39 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+151214 23:56:39 [Note] Event Scheduler: Purging the queue. 0 events
+151214 23:56:39  InnoDB: Starting shutdown...
+151214 23:56:51  InnoDB: Shutdown completed; log sequence number 199934228
+151214 23:56:51 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+151215  0:00:00 [Note] Plugin 'FEDERATED' is disabled.
+151215  0:00:00 InnoDB: The InnoDB memory heap is disabled
+151215  0:00:00 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151215  0:00:00 InnoDB: Compressed tables use zlib 1.2.3
+151215  0:00:00 InnoDB: Initializing buffer pool, size = 128.0M
+151215  0:00:00 InnoDB: Completed initialization of buffer pool
+151215  0:00:00 InnoDB: highest supported file format is Barracuda.
+151215  0:00:00  InnoDB: Waiting for the background threads to start
+151215  0:00:01 InnoDB: 5.5.40 started; log sequence number 199934228
+151215  0:00:01 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151215  0:00:01 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151215  0:00:01 [Note] Server socket created on IP: '127.0.0.1'.
+151215  0:00:01 [Note] Event Scheduler: Loaded 0 events
+151215  0:00:01 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151225 14:41:06 [Note] Plugin 'FEDERATED' is disabled.
+151225 14:41:07 InnoDB: The InnoDB memory heap is disabled
+151225 14:41:07 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151225 14:41:07 InnoDB: Compressed tables use zlib 1.2.3
+151225 14:41:07 InnoDB: Initializing buffer pool, size = 128.0M
+151225 14:41:07 InnoDB: Completed initialization of buffer pool
+151225 14:41:07 InnoDB: highest supported file format is Barracuda.
+151225 14:41:20  InnoDB: Waiting for the background threads to start
+151225 14:41:21 InnoDB: 5.5.40 started; log sequence number 199934228
+151225 14:41:21 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151225 14:41:21 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151225 14:41:21 [Note] Server socket created on IP: '127.0.0.1'.
+151225 14:41:23 [Note] Event Scheduler: Loaded 0 events
+151225 14:41:23 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151225 14:59:12 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Normal shutdown
+
+151225 14:59:12 [Note] Event Scheduler: Purging the queue. 0 events
+151225 14:59:12  InnoDB: Starting shutdown...
+151225 14:59:14  InnoDB: Shutdown completed; log sequence number 199934228
+151225 14:59:14 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: Shutdown complete
+
+151225 15:00:35 [Note] Plugin 'FEDERATED' is disabled.
+151225 15:00:36 InnoDB: The InnoDB memory heap is disabled
+151225 15:00:36 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151225 15:00:36 InnoDB: Compressed tables use zlib 1.2.3
+151225 15:00:36 InnoDB: Initializing buffer pool, size = 128.0M
+151225 15:00:36 InnoDB: Completed initialization of buffer pool
+151225 15:00:36 InnoDB: highest supported file format is Barracuda.
+151225 15:00:39  InnoDB: Waiting for the background threads to start
+151225 15:00:40 InnoDB: 5.5.40 started; log sequence number 199934228
+151225 15:00:40 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151225 15:00:40 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151225 15:00:40 [Note] Server socket created on IP: '127.0.0.1'.
+151225 15:00:41 [Note] Event Scheduler: Loaded 0 events
+151225 15:00:41 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151225 17:27:20 [Note] Plugin 'FEDERATED' is disabled.
+151225 17:27:20 InnoDB: The InnoDB memory heap is disabled
+151225 17:27:20 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151225 17:27:20 InnoDB: Compressed tables use zlib 1.2.3
+151225 17:27:20 InnoDB: Initializing buffer pool, size = 128.0M
+151225 17:27:20 InnoDB: Completed initialization of buffer pool
+151225 17:27:20 InnoDB: highest supported file format is Barracuda.
+151225 17:27:24  InnoDB: Waiting for the background threads to start
+151225 17:27:25 InnoDB: 5.5.40 started; log sequence number 199934228
+151225 17:27:25 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151225 17:27:25 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151225 17:27:25 [Note] Server socket created on IP: '127.0.0.1'.
+151225 17:27:26 [Note] Event Scheduler: Loaded 0 events
+151225 17:27:26 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151227 23:26:05 [Note] Plugin 'FEDERATED' is disabled.
+151227 23:26:05 InnoDB: The InnoDB memory heap is disabled
+151227 23:26:05 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151227 23:26:05 InnoDB: Compressed tables use zlib 1.2.3
+151227 23:26:05 InnoDB: Initializing buffer pool, size = 128.0M
+151227 23:26:05 InnoDB: Completed initialization of buffer pool
+151227 23:26:06 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+151227 23:26:06  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+151227 23:26:42  InnoDB: Waiting for the background threads to start
+151227 23:26:43 InnoDB: 5.5.40 started; log sequence number 234042448
+151227 23:26:43 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151227 23:26:43 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151227 23:26:43 [Note] Server socket created on IP: '127.0.0.1'.
+151227 23:26:46 [Note] Event Scheduler: Loaded 0 events
+151227 23:26:46 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151228 22:50:46 [Note] Plugin 'FEDERATED' is disabled.
+151228 22:50:46 InnoDB: The InnoDB memory heap is disabled
+151228 22:50:46 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151228 22:50:46 InnoDB: Compressed tables use zlib 1.2.3
+151228 22:50:46 InnoDB: Initializing buffer pool, size = 128.0M
+151228 22:50:46 InnoDB: Completed initialization of buffer pool
+151228 22:50:47 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+151228 22:50:47  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+151228 22:50:57  InnoDB: Waiting for the background threads to start
+151228 22:50:58 InnoDB: 5.5.40 started; log sequence number 234042448
+151228 22:50:58 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151228 22:50:58 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151228 22:50:58 [Note] Server socket created on IP: '127.0.0.1'.
+151228 22:50:59 [Note] Event Scheduler: Loaded 0 events
+151228 22:50:59 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151231 10:41:41 [Note] Plugin 'FEDERATED' is disabled.
+151231 10:41:42 InnoDB: The InnoDB memory heap is disabled
+151231 10:41:42 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151231 10:41:42 InnoDB: Compressed tables use zlib 1.2.3
+151231 10:41:42 InnoDB: Initializing buffer pool, size = 128.0M
+151231 10:41:42 InnoDB: Completed initialization of buffer pool
+151231 10:41:42 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+151231 10:41:42  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+151231 10:41:46  InnoDB: Waiting for the background threads to start
+151231 10:41:47 InnoDB: 5.5.40 started; log sequence number 234042448
+151231 10:41:47 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151231 10:41:47 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151231 10:41:47 [Note] Server socket created on IP: '127.0.0.1'.
+151231 10:41:51 [Note] Event Scheduler: Loaded 0 events
+151231 10:41:51 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151231 12:25:12 [Note] Plugin 'FEDERATED' is disabled.
+151231 12:25:13 InnoDB: The InnoDB memory heap is disabled
+151231 12:25:13 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151231 12:25:13 InnoDB: Compressed tables use zlib 1.2.3
+151231 12:25:13 InnoDB: Initializing buffer pool, size = 128.0M
+151231 12:25:13 InnoDB: Completed initialization of buffer pool
+151231 12:25:13 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+151231 12:25:13  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+151231 12:25:17  InnoDB: Waiting for the background threads to start
+151231 12:25:18 InnoDB: 5.5.40 started; log sequence number 234042448
+151231 12:25:18 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151231 12:25:18 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151231 12:25:18 [Note] Server socket created on IP: '127.0.0.1'.
+151231 12:25:20 [Note] Event Scheduler: Loaded 0 events
+151231 12:25:20 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+160101  3:57:13 [Note] Plugin 'FEDERATED' is disabled.
+160101  3:57:13 InnoDB: The InnoDB memory heap is disabled
+160101  3:57:13 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160101  3:57:13 InnoDB: Compressed tables use zlib 1.2.3
+160101  3:57:13 InnoDB: Initializing buffer pool, size = 128.0M
+160101  3:57:13 InnoDB: Completed initialization of buffer pool
+160101  3:57:13 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+160101  3:57:14  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160101  3:57:18  InnoDB: Waiting for the background threads to start
+160101  3:57:19 InnoDB: 5.5.40 started; log sequence number 234042448
+160101  3:57:19 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+160101  3:57:19 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+160101  3:57:19 [Note] Server socket created on IP: '127.0.0.1'.
+160101  3:57:21 [Note] Event Scheduler: Loaded 0 events
+160101  3:57:21 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+160101 10:41:48 [Note] Plugin 'FEDERATED' is disabled.
+160101 10:41:48 InnoDB: The InnoDB memory heap is disabled
+160101 10:41:48 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160101 10:41:48 InnoDB: Compressed tables use zlib 1.2.3
+160101 10:41:48 InnoDB: Initializing buffer pool, size = 128.0M
+160101 10:41:48 InnoDB: Completed initialization of buffer pool
+160101 10:41:48 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+160101 10:41:49  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160101 10:41:53  InnoDB: Waiting for the background threads to start
+160101 10:41:54 InnoDB: 5.5.40 started; log sequence number 234042448
+160101 10:41:54 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+160101 10:41:54 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+160101 10:41:54 [Note] Server socket created on IP: '127.0.0.1'.
+160101 10:41:55 [Note] Event Scheduler: Loaded 0 events
+160101 10:41:55 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+160101 21:06:27 [Note] Plugin 'FEDERATED' is disabled.
+160101 21:06:27 InnoDB: The InnoDB memory heap is disabled
+160101 21:06:27 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160101 21:06:27 InnoDB: Compressed tables use zlib 1.2.3
+160101 21:06:27 InnoDB: Initializing buffer pool, size = 128.0M
+160101 21:06:27 InnoDB: Completed initialization of buffer pool
+160101 21:06:27 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+160101 21:06:27  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160101 21:06:32  InnoDB: Waiting for the background threads to start
+160101 21:06:33 InnoDB: 5.5.40 started; log sequence number 234042448
+160101 21:06:33 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+160101 21:06:33 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+160101 21:06:33 [Note] Server socket created on IP: '127.0.0.1'.
+160101 21:06:34 [Note] Event Scheduler: Loaded 0 events
+160101 21:06:34 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+160103 14:13:38 [Note] Plugin 'FEDERATED' is disabled.
+160103 14:13:38 InnoDB: The InnoDB memory heap is disabled
+160103 14:13:38 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160103 14:13:38 InnoDB: Compressed tables use zlib 1.2.3
+160103 14:13:38 InnoDB: Initializing buffer pool, size = 128.0M
+160103 14:13:38 InnoDB: Completed initialization of buffer pool
+160103 14:13:38 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+160103 14:13:38  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160103 14:13:42  InnoDB: Waiting for the background threads to start
+160103 14:13:43 InnoDB: 5.5.40 started; log sequence number 234042448
+160103 14:13:43 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+160103 14:13:43 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+160103 14:13:43 [Note] Server socket created on IP: '127.0.0.1'.
+160103 14:13:45 [Note] Event Scheduler: Loaded 0 events
+160103 14:13:45 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+160105 12:00:37 [Note] Plugin 'FEDERATED' is disabled.
+160105 12:00:38 InnoDB: The InnoDB memory heap is disabled
+160105 12:00:38 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160105 12:00:38 InnoDB: Compressed tables use zlib 1.2.3
+160105 12:00:38 InnoDB: Initializing buffer pool, size = 128.0M
+160105 12:00:38 InnoDB: Completed initialization of buffer pool
+160105 12:00:38 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+160105 12:00:38  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160105 12:00:42  InnoDB: Waiting for the background threads to start
+160105 12:00:43 InnoDB: 5.5.40 started; log sequence number 234042448
+160105 12:00:43 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+160105 12:00:43 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+160105 12:00:43 [Note] Server socket created on IP: '127.0.0.1'.
+160105 12:00:45 [Note] Event Scheduler: Loaded 0 events
+160105 12:00:45 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)
+160105 21:03:10 [Note] Plugin 'FEDERATED' is disabled.
+160105 21:03:10 InnoDB: The InnoDB memory heap is disabled
+160105 21:03:10 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160105 21:03:10 InnoDB: Compressed tables use zlib 1.2.3
+160105 21:03:10 InnoDB: Initializing buffer pool, size = 128.0M
+160105 21:03:10 InnoDB: Completed initialization of buffer pool
+160105 21:03:10 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+160105 21:03:10  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+160105 21:03:15  InnoDB: Waiting for the background threads to start
+160105 21:03:16 InnoDB: 5.5.40 started; log sequence number 234042448
+160105 21:03:16 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+160105 21:03:16 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+160105 21:03:16 [Note] Server socket created on IP: '127.0.0.1'.
+160105 21:03:18 [Note] Event Scheduler: Loaded 0 events
+160105 21:03:18 [Note] C:\Bitnami\drupal-7.34-1\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.40'  socket: ''  port: 3306  MySQL Community Server (GPL)

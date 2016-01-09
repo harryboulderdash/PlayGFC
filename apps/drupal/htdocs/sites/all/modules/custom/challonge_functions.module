@@ -105,160 +105,206 @@ function createGFCTournament($mynodeidparent) {
 }
 
 function StartTournament($tournamentid){
-    include_once DRUPAL_ROOT . '/includes/challonge.class.php';
 
     //check in tournament
     //get team and match info and update GFC
     //start tournament
 
-    //set for debug
-    //$tournamentid = 211;
-
-    $c = new ChallongeAPI('XqrMnBPs15MvmX0izddB4zyIHKswRCoaIAyq4cTt');
-
-    //load up GFC tourney data
-    $tourneywrapper = GetWrapperByEntityID($tournamentid);
-    //$node = node_load($tournamentid);
-    //$tourneywrapper = entity_metadata_wrapper('node',$node);
-
-    $challongeid = $tourneywrapper->field_tournament_challonge_id->value();
-
-//STEP 1 -- PUBLISH TOURNEY***********************
-
-    // Publish a tournament -- WORKS!
-    // http://challonge.com/api/tournaments/publish/:tournament
-    //$tournament_id = $tournamentid;
-    $params = array();
-    $tournament = $c->makeCall("tournaments/publish/$challongeid", $params, "post");
-    $tournament = $c->publishTournament($challongeid, $params);
-
-    //step 1.5 randomize seeds
-    $params = array();
-    $participants = $c->makeCall("tournaments/$challongeid/participants/randomize", array(), "post");
-    $tournament = $c->randomizeParticipants($challongeid, $params);
+    try {
+        include_once DRUPAL_ROOT . '/includes/challonge.class.php';
 
 
-//STEP 2 -- START TOURNEY***********************
 
-    // Start a tournament -- WORKS!
-    // http://challonge.com/api/tournaments/start/:tournament
-    $params = array();
-    $tournament = $c->makeCall("tournaments/start/$challongeid", $params, "post");
-    $tournament = $c->startTournament($challongeid, $params);
+        //set for debug
+        //$tournamentid = 211;
 
+        $c = new ChallongeAPI('XqrMnBPs15MvmX0izddB4zyIHKswRCoaIAyq4cTt');
 
-//STEP 3 --UPDATE TEAMS WITH TEAM IDs***********************
+        //load up GFC tourney data
+        $tourneywrapper = GetWrapperByEntityID($tournamentid);
+        //$node = node_load($tournamentid);
+        //$tourneywrapper = entity_metadata_wrapper('node',$node);
 
-    // Get all participants -- WORKS!
-    // http://challonge.com/api/tournaments/:tournament/participants
-    $participants = $c->makeCall("tournaments/$challongeid/participants");
-    $participants = $c->getParticipants($challongeid);
+        $challongeid = $tourneywrapper->field_tournament_challonge_id->value();
 
-    //log response
-    _watchdog_log('Challonge respsonse getting participants for tourney: ' . $challongeid, print_r( $c->result ));
+        //STEP 1 -- PUBLISH TOURNEY***********************
 
-    // retrieve param values needed from GFC data
+        // Publish a tournament -- WORKS!
+        // http://challonge.com/api/tournaments/publish/:tournament
+        //$tournament_id = $tournamentid;
+        $params = array();
+        $tournament = $c->makeCall("tournaments/publish/$challongeid", $params, "post");
+        $tournament = $c->publishTournament($challongeid, $params);
 
-    //iterate through team gfc node ids
-    foreach($tourneywrapper->field_tournament_teams_entered->getIterator() as $delta => $team){
-
-        //set variable to team name
-        $teamname = $team->field_team_id->value();
-        //print $teamname . "<BR>";
-
-        //update GFC teams with IDs
-        foreach($participants as $participant){
-
-            if(str_replace ( ' ', '',$participant->misc) == str_replace ( ' ', '',$teamname)){
-                //if team matches name get id and update
-                $team->field_team_challonge_id->set((integer)$participant->id);
-                $team->save();
-                print $participant->misc;
-                //return;
-            }
-
-        }
-    }
+        //step 1.5 randomize seeds
+        $params = array();
+        $participants = $c->makeCall("tournaments/$challongeid/participants/randomize", array(), "post");
+        $tournament = $c->randomizeParticipants($challongeid, $params);
 
 
-//STEP 4 -- CREATE MATCHES IN GFC***********************
+        //STEP 2 -- START TOURNEY***********************
 
-    //Get all Matches -- WORKS! includes ids for team 1 and team 2 which could be used
-    // http://challonge.com/api/tournaments/:tournament/matches
-    //$tournament_id = $tournamentid;
-    $params = array();
-    $matches = $c->makeCall("tournaments/$challongeid/matches", $params);
-    $matches = $c->getMatches($challongeid, $params);
-    //print_r( $c->result );
-
-    foreach($matches as $match){
-
-        $values = array(
-            'type' => 'match',
-            'uid' => 1,
-            'status' => 1,
-            'comment' => 1,
-            'promote' => 0,
-        );
-
-        //create match entity and wrap it
-        $matchentity = entity_create('node', $values);
-        $emw = entity_metadata_wrapper('node',$matchentity);
+        // Start a tournament -- WORKS!
+        // http://challonge.com/api/tournaments/start/:tournament
+        $params = array();
+        $tournament = $c->makeCall("tournaments/start/$challongeid", $params, "post");
+        $tournament = $c->startTournament($challongeid, $params);
 
 
-        //SAVE TIME BY Skiping the query if there is no team yet set for a match
-        //ELSE Use challonge IDs to query for Team IDs and use values in match
+        //STEP 3 --UPDATE TEAMS WITH TEAM IDs***********************
 
-        if((integer)$match->{'player1-id'}!=0 && (integer)$match->{'player2-id'}!=0) {
-            //get team nids from team query
-            $query = new EntityFieldQuery();
+        // Get all participants -- WORKS!
+        // http://challonge.com/api/tournaments/:tournament/participants
+        $participants = $c->makeCall("tournaments/$challongeid/participants");
+        $participants = $c->getParticipants($challongeid);
 
-            $query->entityCondition('entity_type', 'node')
-                ->entityCondition('bundle', 'team')
-                ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player1-id'}, '=')
-                ->addMetaData('account', user_load(1)); // Run the query as user 1.
+        //log response
+        _watchdog_log('Challonge respsonse getting participants for tourney: ' . $challongeid, print_r($c->result));
 
-            $result = $query->execute();
+        // retrieve param values needed from GFC data
 
+        //iterate through team gfc node ids
+        foreach ($tourneywrapper->field_tournament_teams_entered->getIterator() as $delta => $team) {
 
-            if (isset($result['node'])) {
-                $nodes = entity_load('node', array_keys($result['node']));
-                foreach ($nodes as $node) {
-                    $team1 = $node->nid;
-                }
-            }
+            //set variable to team name
+            $teamname = $team->field_team_id->value();
+            //print $teamname . "<BR>";
 
-            //get team nids from team 2 query
-            $query2 = new EntityFieldQuery();
+            //update GFC teams with IDs
+            foreach ($participants as $participant) {
 
-            $query2->entityCondition('entity_type', 'node')
-                ->entityCondition('bundle', 'team')
-                ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player2-id'}, '=')
-                ->addMetaData('account', user_load(1)); // Run the query as user 1.
-
-            $result2 = $query2->execute();
-
-            if (isset($result2['node'])) {
-                $nodes2 = entity_load('node', array_keys($result2['node']));
-                foreach ($nodes2 as $node2) {
-                    $team2 = $node2->nid;
+                if (str_replace(' ', '', $participant->misc) == str_replace(' ', '', $teamname)) {
+                    //if team matches name get id and update
+                    $team->field_team_challonge_id->set((integer)$participant->id);
+                    $team->save();
+                    print $participant->misc;
+                    //return;
                 }
 
             }
         }
 
 
-        //set field values
-        $emw->field_match_challonge_id->set((integer)$match->id);
-        $emw->field_match_round->set((integer)$match->round);
-        $emw->title->set($tourneywrapper->field_tournament_name->value() . "_" . (string)$match->id);
+        //STEP 4 -- CREATE MATCHES IN GFC***********************
 
-        // only set teams if they are known
-        if((integer)$match->{'player1-id'}!=0 && (integer)$match->{'player2-id'}!=0) {
-            $emw->field_match_team_1->set((integer)$team1);
-            $emw->field_match_team_2->set((integer)$team2);
-            $emw->field_match_status->set("Ready For Play");
-        }
+        //Get all Matches -- WORKS! includes ids for team 1 and team 2 which could be used
+        // http://challonge.com/api/tournaments/:tournament/matches
+        //$tournament_id = $tournamentid;
+        $params = array();
+        $matches = $c->makeCall("tournaments/$challongeid/matches", $params);
+        $matches = $c->getMatches($challongeid, $params);
+        //print_r( $c->result );
+
+        foreach ($matches as $match) {
+
+            $values = array(
+                'type' => 'match',
+                'uid' => 1,
+                'status' => 1,
+                'comment' => 1,
+                'promote' => 0,
+            );
+
+            //create match entity and wrap it
+            $matchentity = entity_create('node', $values);
+            $emw = entity_metadata_wrapper('node', $matchentity);
+
+
+            //SAVE TIME BY Skiping the query if there is no team yet set for a match
+            //ELSE Use challonge IDs to query for Team IDs and use values in match
+
+            if ((integer)$match->{'player1-id'} != 0 && (integer)$match->{'player2-id'} != 0) {
+                //get team nids from team query
+                $query = new EntityFieldQuery();
+
+                $query->entityCondition('entity_type', 'node')
+                    ->entityCondition('bundle', 'team')
+                    ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player1-id'}, '=')
+                    ->addMetaData('account', user_load(1)); // Run the query as user 1.
+
+                $result = $query->execute();
+
+
+                if (isset($result['node'])) {
+                    $nodes = entity_load('node', array_keys($result['node']));
+                    foreach ($nodes as $node) {
+                        $team1 = $node->nid;
+                    }
+                }
+
+                //get team nids from team 2 query
+                $query2 = new EntityFieldQuery();
+
+                $query2->entityCondition('entity_type', 'node')
+                    ->entityCondition('bundle', 'team')
+                    ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player2-id'}, '=')
+                    ->addMetaData('account', user_load(1)); // Run the query as user 1.
+
+                $result2 = $query2->execute();
+
+                if (isset($result2['node'])) {
+                    $nodes2 = entity_load('node', array_keys($result2['node']));
+                    foreach ($nodes2 as $node2) {
+                        $team2 = $node2->nid;
+                    }
+
+                }
+            }
+            //STEP 4.5 -- CREATE MATCHES WITH ROUND MAPS IN GFC***********************
+            //***************************************
+            //Load and store the maps that will be used in the map rounds. This is based on # of rounds as defined in tourney 'best of' value.
+            //***************************************
+
+            //get best of value in variable to determine num of maps needed
+            $bestOfNumber = $tourneywrapper->field_tournament_best_of->value();
+
+            //get game title value for call to get maps
+            $gameTitle = $tourneywrapper->field_tournament_game_type->value();
+
+            //get game mode value for call to get maps
+            $gameMode = $tourneywrapper->field_tournament_game_modes->value();
+
+            //call function to get all maps for the tourney title and mode and store in array
+            $arrMaps = getMapsByTitleAndMode($gameTitle, $gameMode);
+
+            //create variable for maps csv
+            $mapsCSV = '';
+
+            //iteriate through maps based on number needed to build csv string of maps/rounds for this match
+            for ($i = 1; $i < $bestOfNumber; $i++) {
+                // If the history array is empty, re-populate it.
+                if (empty($arr_history)) {
+                    $arr_history = $arrMaps;
+                }
+
+                // Randomize the array.
+                shuffle($arr_history);
+
+                // Select the last value from the array.
+                $selectedMap = array_pop($arr_history);
+
+                // create csv string here for match value
+                $mapsCSV .= ',' . t($selectedMap);
+            }
+
+            // TODO #2
+            // get the seed value from the match and store for team1 and team 2
+
+
+            //set field values
+            $emw->field_match_challonge_id->set((integer)$match->id);
+            $emw->field_match_round->set((integer)$match->round);
+            $emw->title->set($tourneywrapper->field_tournament_name->value() . "_" . (string)$match->id);
+
+            // only set teams if they are known
+            if ((integer)$match->{'player1-id'} != 0 && (integer)$match->{'player2-id'} != 0) {
+                $emw->field_match_team_1->set((integer)$team1);
+                $emw->field_match_team_2->set((integer)$team2);
+                $emw->field_match_status->set("Ready For Play");
+            }
+
+            //field_match_maps‎
+            $emw->field_match_maps‎->set(t($mapsCSV));
 
         //save it out
         $emw->save();
@@ -270,14 +316,16 @@ function StartTournament($tournamentid){
         //clear team id's for matches where participants are not yet known.
         $team1 = 0;
         $team2 = 0;
-
     }
 
-    //Save new URL value to GFC
-    $tourneywrapper->field_tournament_status->set("Started");
-    // save value
-    $tourneywrapper->save();
-
+        //Save new URL value to GFC
+        $tourneywrapper->field_tournament_status->set("Started");
+        // save value
+        $tourneywrapper->save();
+    }
+    catch (EntityMetadataWrapperException $exc) {
+        _watchdog_log($exc->getMessage(),$exc);
+    }
 
 }
 
@@ -285,134 +333,163 @@ function StartTournament($tournamentid){
  * @param $tournament_id
  * @return bool
  */
-function UpdateMatchesDataFromAPI($tournament_id){
+function UpdateMatchesDataFromAPI($tournament_id)
+{
     //This function loads the Challonge API matches data for a tourney
     //and refreshes the match data in GFC
     //so as rounds complete
     //the new round team values are updated in GFC data
     //this should be called as each match result is added
+    try{
+        include_once DRUPAL_ROOT . '/includes/challonge.class.php';
 
-    include_once DRUPAL_ROOT . '/includes/challonge.class.php';
+        $c = new ChallongeAPI('XqrMnBPs15MvmX0izddB4zyIHKswRCoaIAyq4cTt');
 
+        //load up tourney data
+        $wrapper_t = GetWrapperByEntityID($tournament_id);
 
-    $c = new ChallongeAPI('XqrMnBPs15MvmX0izddB4zyIHKswRCoaIAyq4cTt');
+        //get API tourney ID for remote calls
+        $challongeid = $wrapper_t->field_tournament_challonge_id->value();
 
-    //load up tourney data
-    $wrapper_t = GetWrapperByEntityID($tournament_id);
+        //Get all Matches -- WORKS!
+        $params = array();
+        $matches = $c->makeCall("tournaments/$challongeid/matches", $params);
+        $matches = $c->getMatches($challongeid, $params);
 
-    //get API tourney ID for remote calls
-    $challongeid = $wrapper_t->field_tournament_challonge_id->value();
+        foreach ($matches as $match) {
 
+            //load corresponding GFC match entity and wrap it
+            $query3 = new EntityFieldQuery();
 
-    //Get all Matches -- WORKS!
-    $params = array();
-    $matches = $c->makeCall("tournaments/$challongeid/matches", $params);
-    $matches = $c->getMatches($challongeid, $params);
-
-    foreach($matches as $match){
-
-        //load corresponding GFC match entity and wrap it
-        $query3 = new EntityFieldQuery();
-
-        $query3->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'match')
-            ->fieldCondition('field_match_challonge_id', 'value', (integer)$match->{'id'}, '=')
-            ->addMetaData('account', user_load(1)); // Run the query as user 1.
-
-        $result3 = $query3->execute();
-
-
-        if (isset($result3['node'])) {
-            $nodes3 = entity_load('node', array_keys($result3['node']));
-            foreach ($nodes3 as $node3) {
-                $emw = GetWrapperByEntityID($node3->nid);
-            }
-        }
-
-
-        //SAVE TIME BY Skiping the query if there is no team yet set for a match
-        //ELSE Use challonge IDs to query for Team IDs and use values in match
-
-        if((integer)$match->{'player1-id'}!=0 && (integer)$match->{'player2-id'}!=0) {
-            //get team nids from team query
-            $query = new EntityFieldQuery();
-
-            $query->entityCondition('entity_type', 'node')
-                ->entityCondition('bundle', 'team')
-                ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player1-id'}, '=')
+            $query3->entityCondition('entity_type', 'node')
+                ->entityCondition('bundle', 'match')
+                ->fieldCondition('field_match_challonge_id', 'value', (integer)$match->{'id'}, '=')
                 ->addMetaData('account', user_load(1)); // Run the query as user 1.
 
-            $result = $query->execute();
+            $result3 = $query3->execute();
 
 
-            if (isset($result['node'])) {
-                $nodes = entity_load('node', array_keys($result['node']));
-                foreach ($nodes as $node) {
-                    $team1 = $node->nid;
+            if (isset($result3['node'])) {
+                $nodes3 = entity_load('node', array_keys($result3['node']));
+                foreach ($nodes3 as $node3) {
+                    $emw = GetWrapperByEntityID($node3->nid);
                 }
             }
 
-            //get team nids from team 2 query
-            $query2 = new EntityFieldQuery();
 
-            $query2->entityCondition('entity_type', 'node')
-                ->entityCondition('bundle', 'team')
-                ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player2-id'}, '=')
-                ->addMetaData('account', user_load(1)); // Run the query as user 1.
+            //SAVE TIME BY Skiping the query if there is no team yet set for a match
+            //ELSE Use challonge IDs to query for Team IDs and use values in match
 
-            $result2 = $query2->execute();
+            if ((integer)$match->{'player1-id'} != 0 && (integer)$match->{'player2-id'} != 0) {
+                //get team nids from team query
+                $query = new EntityFieldQuery();
 
-            if (isset($result2['node'])) {
-                $nodes2 = entity_load('node', array_keys($result2['node']));
-                foreach ($nodes2 as $node2) {
-                    $team2 = $node2->nid;
+                $query->entityCondition('entity_type', 'node')
+                    ->entityCondition('bundle', 'team')
+                    ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player1-id'}, '=')
+                    ->addMetaData('account', user_load(1)); // Run the query as user 1.
+
+                $result = $query->execute();
+
+
+                if (isset($result['node'])) {
+                    $nodes = entity_load('node', array_keys($result['node']));
+                    foreach ($nodes as $node) {
+                        $team1 = $node->nid;
+                    }
                 }
 
+                //get team nids from team 2 query
+                $query2 = new EntityFieldQuery();
+
+                $query2->entityCondition('entity_type', 'node')
+                    ->entityCondition('bundle', 'team')
+                    ->fieldCondition('field_team_challonge_id', 'value', (integer)$match->{'player2-id'}, '=')
+                    ->addMetaData('account', user_load(1)); // Run the query as user 1.
+
+                $result2 = $query2->execute();
+
+                if (isset($result2['node'])) {
+                    $nodes2 = entity_load('node', array_keys($result2['node']));
+                    foreach ($nodes2 as $node2) {
+                        $team2 = $node2->nid;
+                    }
+
+                }
             }
-        }
 
-        //set field values
-        //$emw->field_match_challonge_id->set((integer)$match->id);
-        //$emw->field_match_round->set((integer)$match->round);
-        //$emw->title->set($tourneywrapper->field_tournament_name->value() . "_" . (string)$match->id);
+            //set field values
+            //$emw->field_match_challonge_id->set((integer)$match->id);
+            //$emw->field_match_round->set((integer)$match->round);
+            //$emw->title->set($tourneywrapper->field_tournament_name->value() . "_" . (string)$match->id);
 
-        // only set teams if they are known
-        if((integer)$match->{'player1-id'}!=0 && (integer)$match->{'player2-id'}!=0) {
-            $emw->field_match_team_1->set((integer)$team1);
-            $emw->field_match_team_2->set((integer)$team2);
-            //if match was pending and now ready update status, don't update for matches in progress or completed
-            if ($emw->field_match_status->value() == "Pending Prior Round") {
-                $emw->field_match_status->set("Ready For Play");
+            // only set teams if they are known
+            if ((integer)$match->{'player1-id'} != 0 && (integer)$match->{'player2-id'} != 0) {
+                $emw->field_match_team_1->set((integer)$team1);
+                $emw->field_match_team_2->set((integer)$team2);
+                //if match was pending and now ready update status, don't update for matches in progress or completed
+                if ($emw->field_match_status->value() == "Pending Prior Round") {
+                    $emw->field_match_status->set("Ready For Play");
+                }
             }
+
+            //TODO:Assign map and starting host for each map
+            //delete todo when validated eating
+
+            //***************************************
+            //Load and store the maps that will be used in the map rounds. This is based on # of rounds as defined in tourney 'best of' value.
+            //***************************************
+
+            //get best of value in variable to determine num of maps needed
+            $bestOfNumber = $wrapper_t->field_tournament_best_of->value();
+
+            //get game title value for call to get maps
+            $gameTitle = $wrapper_t->field_tournament_game_type->value();
+
+            //get game mode value for call to get maps
+            $gameMode = $wrapper_t->field_tournament_game_modes->value();
+
+            //call function to get all maps for the tourney title and mode and store in array
+            $arrMaps = getMapsByTitleAndMode($gameTitle, $gameMode);
+
+            //create variable for maps csv
+            $mapsCSV = '';
+
+            //iteriate through maps based on number needed to build csv string of maps/rounds for this match
+            for ($i = 1; $i < $bestOfNumber; $i++) {
+                // If the history array is empty, re-populate it.
+                if (empty($arr_history)) {
+                    $arr_history = $arrMaps;
+                }
+
+                // Randomize the array.
+                shuffle($arr_history);
+
+                // Select the last value from the array.
+                $selectedMap = array_pop($arr_history);
+
+                // create csv string here for match value
+                $mapsCSV .= ',' . t($selectedMap);
+            }
+
+            // set the field_match_maps‎ value
+            $emw->field_match_maps‎->set(t($mapsCSV));
+
+            //save it out
+            $emw->save();
+
+
+            //clear team id's for matches where participants are not yet known.
+            $team1 = 0;
+            $team2 = 0;
+
+            return $c->result;
+
         }
-
-        //TODO:Assign map and starting host for each map
-
-        /*
-         * ******************URGENT*****************************
-         * Assign map and starting host for each map
-         *
-         * Lookup maps based on title and mode combo:
-         *      and randomize but do not repeat in a match
-         *
-         * Random pick of first host, them alternate for the remander of value for best of.
-         *
-         *
-         *
-         * */
-
-        //save it out
-        $emw->save();
-
-
-        //clear team id's for matches where participants are not yet known.
-        $team1 = 0;
-        $team2 = 0;
-
-        return $c->result;
-
     }
-
+    catch (EntityMetadataWrapperException $exc) {
+        _watchdog_log($exc->getMessage(),$exc);
+    }
 }
 
 function UpdateMatchResult($tournament_id, $match_id, $team_1_score, $team_2_score, $isDisputed = 0){
@@ -483,7 +560,6 @@ function UpdateMatchResult($tournament_id, $match_id, $team_1_score, $team_2_sco
     catch (EntityMetadataWrapperException $exc) {
         _watchdog_log($exc->getMessage(),$exc);
     }
-
 
 }
 
@@ -608,6 +684,39 @@ function getPlayerRoles(){
         _watchdog_log($e->getMessage());
     }
 
+}
+
+function getMapsByTitleAndMode($gameTitle, $gameMode){
+    try{
+        //
+        $gameMaps = array();
+        $query = new EntityFieldQuery();
+
+        $query->entityCondition('entity_type', 'taxonomy_term')
+            ->entityCondition('bundle', 'maps_advanced_warfare')
+            ->fieldCondition('field_ref_map_game', 'target_id', $gameTitle, '=')
+            ->fieldCondition('field_ref_map_mode', 'target_id', $gameMode, '=')
+
+            ->addMetaData('account', user_load(1)); // Run the query as user 1.
+
+        $result = $query->execute();
+
+
+        if (!empty($result['taxonomy_term'])) {
+            $maps = taxonomy_term_load_multiple(array_keys($result['taxonomy_term']));
+        }
+
+        //add to array using term id for index and term name for value
+        foreach ($maps as $map) {
+            //dpm($role);
+            $gameMaps[$map->tid] = $map->name;
+        }
+
+        return $gameMaps;
+
+    } catch (Exception $e) {
+        _watchdog_log($e->getMessage());
+    }
 }
 
 function getChallongeTournamentIDByNodeID($tournamentNID){

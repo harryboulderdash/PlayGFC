@@ -259,10 +259,13 @@ function StartTournament($tournamentid){
             $bestOfNumber = $tourneywrapper->field_tournament_best_of->value();
 
             //get game title value for call to get maps
-            $gameTitle = $tourneywrapper->field_tournament_game_type->value();
+            $gameTitle = $tourneywrapper->field_tournament_game_type->value()->vid;
 
             //get game mode value for call to get maps
-            $gameMode = $tourneywrapper->field_tournament_game_modes->value();
+            $gameMode = $tourneywrapper->field_tournament_game_modes->value()->tid;
+
+            //debug logging
+            _watchdog_log('variables for map setting, line 267: ' . 'best of:' . $bestOfNumber . 'game title:'. $gameTitle . '$gameMode' .$gameMode, print_r($tourneywrapper));
 
             //call function to get all maps for the tourney title and mode and store in array
             $arrMaps = getMapsByTitleAndMode($gameTitle, $gameMode);
@@ -271,7 +274,7 @@ function StartTournament($tournamentid){
             $mapsCSV = '';
 
             //iteriate through maps based on number needed to build csv string of maps/rounds for this match
-            for ($i = 1; $i < $bestOfNumber; $i++) {
+            for ($i = 1; $i <= $bestOfNumber; $i++) {
                 // If the history array is empty, re-populate it.
                 if (empty($arr_history)) {
                     $arr_history = $arrMaps;
@@ -284,7 +287,10 @@ function StartTournament($tournamentid){
                 $selectedMap = array_pop($arr_history);
 
                 // create csv string here for match value
-                $mapsCSV .= ',' . t($selectedMap);
+                $mapsCSV .=  t($selectedMap);
+                if ($i != $bestOfNumber) {
+                    $mapsCSV .= ',' ;
+                }
             }
 
             // TODO #2
@@ -444,10 +450,10 @@ function UpdateMatchesDataFromAPI($tournament_id)
             $bestOfNumber = $wrapper_t->field_tournament_best_of->value();
 
             //get game title value for call to get maps
-            $gameTitle = $wrapper_t->field_tournament_game_type->value();
+            $gameTitle = $wrapper_t->field_tournament_game_type->value()->vid;
 
             //get game mode value for call to get maps
-            $gameMode = $wrapper_t->field_tournament_game_modes->value();
+            $gameMode = $wrapper_t->field_tournament_game_modes->value()->tid;
 
             //call function to get all maps for the tourney title and mode and store in array
             $arrMaps = getMapsByTitleAndMode($gameTitle, $gameMode);
@@ -456,7 +462,7 @@ function UpdateMatchesDataFromAPI($tournament_id)
             $mapsCSV = '';
 
             //iteriate through maps based on number needed to build csv string of maps/rounds for this match
-            for ($i = 1; $i < $bestOfNumber; $i++) {
+            for ($i = 1; $i <= $bestOfNumber; $i++) {
                 // If the history array is empty, re-populate it.
                 if (empty($arr_history)) {
                     $arr_history = $arrMaps;
@@ -469,7 +475,10 @@ function UpdateMatchesDataFromAPI($tournament_id)
                 $selectedMap = array_pop($arr_history);
 
                 // create csv string here for match value
-                $mapsCSV .= ',' . t($selectedMap);
+                $mapsCSV .=  t($selectedMap);
+                if ($i != $bestOfNumber) {
+                    $mapsCSV .= ',' ;
+                }
             }
 
             // set the field_match_maps‎ value

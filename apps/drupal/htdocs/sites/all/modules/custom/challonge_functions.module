@@ -265,7 +265,7 @@ function StartTournament($tournamentid){
             $gameMode = $tourneywrapper->field_tournament_game_modes->value()->tid;
 
             //debug logging
-            _watchdog_log('variables for map setting, line 267: ' . 'best of:' . $bestOfNumber . 'game title:'. $gameTitle . '$gameMode' .$gameMode, print_r($tourneywrapper));
+            _watchdog_log('Info: variables for map setting, line 267: ' . 'best of:' . $bestOfNumber . 'game title:'. $gameTitle . '$gameMode' .$gameMode, print_r($tourneywrapper));
 
             //call function to get all maps for the tourney title and mode and store in array
             $arrMaps = getMapsByTitleAndMode($gameTitle, $gameMode);
@@ -307,10 +307,12 @@ function StartTournament($tournamentid){
                 $emw->field_match_team_1->set((integer)$team1);
                 $emw->field_match_team_2->set((integer)$team2);
                 $emw->field_match_status->set("Ready For Play");
-            }
 
-            //field_match_maps‎
-            $emw->field_match_maps‎->set(t($mapsCSV));
+                //field_match_maps‎
+                $emw->field_match_status->set((string)$mapsCSV);
+            }
+        }
+
 
         //save it out
         $emw->save();
@@ -322,12 +324,12 @@ function StartTournament($tournamentid){
         //clear team id's for matches where participants are not yet known.
         $team1 = 0;
         $team2 = 0;
-    }
 
         //Save new URL value to GFC
         $tourneywrapper->field_tournament_status->set("Started");
         // save value
         $tourneywrapper->save();
+
     }
     catch (EntityMetadataWrapperException $exc) {
         _watchdog_log($exc->getMessage(),$exc);

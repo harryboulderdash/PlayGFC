@@ -309,7 +309,7 @@ function StartTournament($tournamentid){
                 $emw->field_match_status->set("Ready For Play");
 
                 //field_match_maps‎
-                $emw->field_match_status->set((string)$mapsCSV);
+                $emw->field_match_maps->set((string)$mapsCSV);
             }
         }
 
@@ -426,24 +426,6 @@ function UpdateMatchesDataFromAPI($tournament_id)
                 }
             }
 
-            //set field values
-            //$emw->field_match_challonge_id->set((integer)$match->id);
-            //$emw->field_match_round->set((integer)$match->round);
-            //$emw->title->set($tourneywrapper->field_tournament_name->value() . "_" . (string)$match->id);
-
-            // only set teams if they are known
-            if ((integer)$match->{'player1-id'} != 0 && (integer)$match->{'player2-id'} != 0) {
-                $emw->field_match_team_1->set((integer)$team1);
-                $emw->field_match_team_2->set((integer)$team2);
-                //if match was pending and now ready update status, don't update for matches in progress or completed
-                if ($emw->field_match_status->value() == "Pending Prior Round") {
-                    $emw->field_match_status->set("Ready For Play");
-                }
-            }
-
-            //TODO:Assign map and starting host for each map
-            //delete todo when validated eating
-
             //***************************************
             //Load and store the maps that will be used in the map rounds. This is based on # of rounds as defined in tourney 'best of' value.
             //***************************************
@@ -483,11 +465,26 @@ function UpdateMatchesDataFromAPI($tournament_id)
                 }
             }
 
-            // set the field_match_maps‎ value
-            $emw->field_match_maps‎->set(t($mapsCSV));
+            // only set teams if they are known
+            // if there are teams it is also safe to set the maps
+            if ((integer)$match->{'player1-id'} != 0 && (integer)$match->{'player2-id'} != 0) {
+                $emw->field_match_team_1->set((integer)$team1);
+                $emw->field_match_team_2->set((integer)$team2);
+                //if match was pending and now ready update status, don't update for matches in progress or completed
+                if ($emw->field_match_status->value() == "Pending Prior Round") {
+                    $emw->field_match_status->set("Ready For Play");
+                }
+
+                //field_match_maps‎
+                $emw->field_match_maps->set((string)$mapsCSV);
+            }
 
             //save it out
             $emw->save();
+
+
+            //TODO:Assign starting host for each map
+            //delete todo when validated eating
 
 
             //clear team id's for matches where participants are not yet known.

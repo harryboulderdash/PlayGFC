@@ -113,8 +113,6 @@ function StartTournament($tournamentid){
     try {
         include_once DRUPAL_ROOT . '/includes/challonge.class.php';
 
-
-
         //set for debug
         //$tournamentid = 211;
 
@@ -311,11 +309,13 @@ function StartTournament($tournamentid){
                 //field_match_maps‎
                 $emw->field_match_maps->set((string)$mapsCSV);
             }
+
+
+            //save it out
+            $emw->save();
         }
 
 
-        //save it out
-        $emw->save();
 
         //add to tournament
         $tourneywrapper->field_tournament_match[] = $emw->nid->value();
@@ -491,7 +491,7 @@ function UpdateMatchesDataFromAPI($tournament_id)
             $team1 = 0;
             $team2 = 0;
 
-            return $c->result;
+           // return $c->result;
 
         }
     }

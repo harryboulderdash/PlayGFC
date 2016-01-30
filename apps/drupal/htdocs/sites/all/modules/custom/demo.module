@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Demo module, Basic Ajax form submit (Ajax framework).
+ */
+
+ /**
+  * Implements hook_menu().
+  */
+function demo_menu() {
+    return array(
+        'demo/newsletter' => array(
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('demo_demo_form'),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+        ),
+    );
+}
+
+ /**
+  * A simple newsletter subscribe form.
+  */
+function demo_demo_form($form, &$form_state) {
+    return array(
+        'email' => array(
+            '#type' => 'textfield',
+            '#title' => t('Join our Newsletter'),
+            '#required' => TRUE,
+            '#attributes' => array(
+                'placeholder' => t('mail@example.com'),
+            ),
+        ),
+        'submit' => array(
+            '#type' => 'submit',
+            '#value' => t('Subscribe'),
+            '#ajax' => array(
+                'callback' => 'demo_form_ajax_submit',
+                'wrapper' => 'demo-demo-form',
+                'method' => 'replace',
+                'effect' => 'fade',
+            ),
+        ),
+    );
+}
+
+/**
+ * Ajax callback function.
+ */
+function demo_form_ajax_submit($form, $form_state) {
+    // Dummy/dumb validation for demo purpose.
+    if (!empty($form_state['input']['email'])) {
+        return 'Subscribed !';
+    }
+    else {
+        return $form;
+    }
+}
